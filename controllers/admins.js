@@ -24,7 +24,7 @@ module.exports.addTour = async (req, res) => {
 
     try {
 
-        const { id, title, image } = req.body;
+        const { id, title, description, image } = req.body;
 
         let tour = await Tour.find({ "tourId": id });
 
@@ -35,6 +35,7 @@ module.exports.addTour = async (req, res) => {
 
         tour.tours.push({
             "title": title,
+            "description": description,
             "image": image
         });
 
