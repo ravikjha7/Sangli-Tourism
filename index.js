@@ -12,11 +12,7 @@ app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(express.urlencoded({ extended: true }));
 
-const corsOptions = {
-    origin: "http://localhost:3000",
-    methods: ["GET", "POST"],
-};
-app.use(cors(corsOptions));
+app.use(cors());
 
 connectDB();
 
