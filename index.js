@@ -13,8 +13,7 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(express.urlencoded({ extended: true }));
 
 var corsOptions = {
-    origin: '*',
-    optionsSuccessStatus: 200,
+    origin: true
   }
 
 app.use(cors(corsOptions));
